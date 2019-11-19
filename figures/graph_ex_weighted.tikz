@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+    \tikzstyle{vertex}=[draw,circle,line width=1.0pt];
+    \tikzstyle{myedge}=[line width=1.0pt];
+    \node[vertex] (v1) at (0, 0) {};
+    \node[vertex] (v2) at (2, 0) {};
+    \node[vertex] (v3) at (1.0, 1.5) {};
+    \node[vertex] (v4) at (1.0, 3.1) {};
+
+    \path[myedge,below] (v1) edge node {$0.2$} (v2);
+    \path[myedge,above left] (v1) edge node {$0.7$} (v3);
+    \path[myedge,above right] (v2) edge node {$0.3$} (v3);
+    \path[myedge,left] (v3) edge node {$0.9$} (v4);
+\end{tikzpicture}

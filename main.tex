@@ -1,0 +1,191 @@
+\documentclass[a4paper,12pt,onecolumn,twoside,final]{memoir}
+% TODO: Add 'final' before print
+
+\usepackage{fontspec}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{microtype}
+\usepackage[full]{textcomp} 
+\IfFileExists{garamondx.sty}{%
+    \usepackage{garamondx}%
+    \usepackage[garamondx,cmbraces]{newtxmath}%
+}{%
+    \usepackage{newpxtext,newpxmath}%
+}
+\usepackage{inconsolata} 
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzscale} 
+\usepackage{blindtext}
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+\usepackage{memhfixc}
+\usepackage{hyphenat}
+\usepackage[disable]{todonotes}
+\usepackage{newunicodechar} 
+\usepackage{siunitx} 
+\usepackage[%
+    backend=biber,%
+    bibencoding=utf8,%
+    doi=true,%
+    maxcitenames=2,%
+    date=year
+]{biblatex}
+
+\usetikzlibrary{calc,positioning,arrows}
+
+\addbibresource{references.bib}
+
+\setsecnumdepth{subsection}
+
+% Fix missing characters in garamondx
+\newunicodechar{ß}{\ss}
+\newunicodechar{š}{\v{s}}
+\newunicodechar{ž}{\v{z}}
+\newunicodechar{Ş}{\c{S}}
+
+% Styling for gene names
+\newcommand{\gene}[1]{\textit{#1}}
+
+% Enable subfloats in memoir
+\newsubfloat{figure}
+% \useosf % See: http://mirrors.dotsrc.org/ctan/fonts/garamondx/doc/garamondx-doc.pdf
+
+\maxtocdepth{section}
+
+%\newfontfamily{\titlefont}{Montserrat-Bold.ttf}
+\newfontfamily{\headfont}{Montserrat-Regular.ttf}[%
+    BoldFont = Montserrat-Bold.ttf,%
+    ItalicFont = Montserrat-Italic.ttf,%
+    BoldItalicFont = Montserrat-BoldItalic.ttf%
+]
+
+% Use section-level bibliographies
+\defbibheading{bibliography}[\bibname]{%
+\section{#1}%
+\markboth{#1}{#1}}
+
+% Use LaTeX style arrows in TikZ
+\tikzset{>=latex}
+
+% Setup chapter style
+\chapterstyle{veelo}
+\setlength{\beforechapskip}{14mm}
+\renewcommand*{\chaptitlefont}{\bfseries\LARGE\headfont\flushright}
+
+\setsecheadstyle{\large\bfseries\headfont\raggedright}
+\setsubsecheadstyle{\normalsize\bfseries\headfont\raggedright}
+
+\copypagestyle{pdfpage}{plain}%
+\makeevenfoot{pdfpage}{\raisebox{-2cm}{\thepage}}{}{}
+\makeoddfoot{pdfpage}{}{}{\raisebox{-2cm}{\thepage}}
+
+\begin{document}
+\begin{titlingpage}
+    \begin{tikzpicture}[overlay,remember picture]
+        \node (bg) at (current page.center) {\includegraphics[width=\pagewidth]{sdutitle_white.pdf}};
+        %\node (grid) at (current page.center) {\includegraphics[width=515pt, height=762pt]{SDU_Grid.pdf}};
+
+        %\node (title) at ($(current page.north east)+(-36pt,-35pt)$) [anchor=north east] {%
+        %    \includegraphics[width=3.5cm]{SDU_BLACK_RGB_png.png}
+        %};
+
+        %\node (title) at ($(current page.north west)+(33pt,-49pt-0.125\pageheight)$) [anchor=north west, align=left, scale=1.23] {%
+        %    \titlefont\HUGE Finding patterns in complex\\[4pt]
+        %    \titlefont\HUGE biomedical data using networks\\[4pt]
+        %    \titlefont\HUGE and molecular profiling
+        %};
+
+        %\node (name) at ($(current page.north)+(-5pt,4pt-0.5\pageheight)$) [anchor=north west, align=left] {%
+        %    \titlefont\LARGE Author\\[4pt]
+        %    \titlefont\LARGE Simon J. Larsen
+        %};
+
+        %\node (super) at ($(current page.south)+(-5pt,-17pt+0.375\pageheight)$) [anchor=north west, align=left] {%
+        %    \titlefont\Large Supervisor\\[4pt]
+        %    \titlefont\Large Prof. Dr. Jan Baumbach
+        %};
+
+        %\node (dept) at ($(current page.south)+(-5pt,3pt+0.25\paperheight)$) [anchor=north west, align=left] {%
+        %    \titlefont\small Department of Mathematics\\
+        %    \titlefont\small and Computer Science,\\
+        %    \titlefont\small University of Southern Denmark
+        %};
+
+        %\node (date) at ($(current page.south)+(-4pt,36pt)$) [anchor=south west, align=left] {\titlefont August 2019};
+
+        %\node (diss) at ($(current page.south west)+(29pt,27pt)$) [anchor=north west, align=left, rotate=90, scale=2.74] {%
+        %    \titlefont\HUGE PhD thesis
+        %};
+    \end{tikzpicture}
+\end{titlingpage}
+
+\frontmatter
+\section*{Colophon}
+This document was typeset using Lua\LaTeX{} with the \texttt{memoir} document class. The bibliography was processed with Biber using Bib\LaTeX{}.
+The body text uses the URW Garamond typeface implemented in \texttt{garamondx}, based on Garamond No. 8 by Claude Garamond. Sans-serif text in chapter titles and headings is Montserrat by Julieta Ulanovsky. Typewriter typeface is Inconsolata by Raph Levien.
+
+\clearpage
+\section{Abstract}
+\input{abstract.tex}
+
+\clearpage
+\section[Danish summary]{Dansk resum\'e}
+\input{resume.tex}
+
+\clearpage
+\section{Acknowledgements}
+\input{acknowledgements.tex}
+
+\clearpage
+\section{List of publications}
+\input{publications.tex}
+
+\clearpage
+\section{Overview}
+\input{overview.tex}
+
+\clearpage
+\tableofcontents
+\mainmatter
+\begin{refsection}
+\chapter{Introduction}
+\input{introduction.tex}
+\clearpage
+\printbibliography[heading=subbibintoc]
+\end{refsection}
+
+\chapter[Manuscript 1: CytoMCS: a multiple maximum common subgraph detection tool for Cytoscape]{\textsc{Manuscript 1}\\CytoMCS: a multiple maximum common subgraph detection tool for Cytoscape}
+\includepdf[pages=-,scale=0.90,offset=0 15,pagecommand=\thispagestyle{pdfpage}]{manuscripts/cytomcs_cropped}
+
+\chapter[Manuscript 2: CoNVaQ: a web tool for copy number variation-based association studies]{\textsc{Manuscript 2}\\CoNVaQ: a web tool for copy number variation-based association studies}
+\includepdf[pages=-,scale=0.90,offset=0 15,pagecommand=\thispagestyle{pdfpage}]{manuscripts/convaq_cropped}
+
+\chapter[Manuscript 3: \emph{E. coli} gene regulatory networks are inconsistent with gene expression data]{\textsc{Manuscript 3}\\\emph{E. coli} gene regulatory networks are inconsistent with gene expression data}
+\includepdf[pages=-,scale=0.9,offset=0 10,pagecommand=\thispagestyle{pdfpage}]{manuscripts/ecoli_cropped}
+
+\chapter[Manuscript 4: \emph{De novo} and supervised endophenotyping using network-guided ensemble learning]{\textsc{Manuscript 4}\\\emph{De novo} and supervised endophenotyping using network-guided ensemble learning}
+\includepdf[pages=-,scale=0.85,offset=0 10,pagecommand=\thispagestyle{pdfpage}]{manuscripts/grandforest_cropped}
+
+\chapter[Manuscript 5: Analysis of genetic variants in chronic obstructive pulmonary disease using a hierarchical model of the cell]{\textsc{Manuscript 5}\\Analysis of genetic variants in chronic obstructive pulmonary disease using a hierarchical model of the cell}
+\includepdf[pages=-,scale=0.85,offset=0 10,pagecommand=\thispagestyle{pdfpage}]{manuscripts/ontogwas_cropped}
+
+\begin{refsection}
+\chapter{Discussion, outlook and conclusion}
+\input{discussion.tex}
+\clearpage
+\printbibliography[heading=subbibintoc]
+\end{refsection}
+
+\backmatter
+
+\chapter{Supplementary materials for Manuscript 3}
+\includepdf[pages=-,scale=0.85,offset=-0 0,pagecommand={\thispagestyle{pdfpage}}]{manuscripts/ecoli_supp_cropped}
+
+\chapter{Supplementary materials for Manuscript 4}
+\includepdf[pages=-,scale=0.85,offset=-0 0,pagecommand={\thispagestyle{pdfpage}}]{manuscripts/grandforest_supp_cropped}
+
+\chapter{Supplementary materials for Manuscript 5}
+\includepdf[pages=-,scale=0.85,offset=-0 0,pagecommand={\thispagestyle{pdfpage}}]{manuscripts/ontogwas_supp_cropped}
+
+\end{document}

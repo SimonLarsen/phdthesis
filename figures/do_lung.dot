@@ -1,0 +1,102 @@
+digraph {
+  node [shape=none, fixedsize=false, fontname="Arial"];
+  edge [dir="back"];
+  1 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:4</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Disease</TD></TR>
+    </TABLE>
+  >];
+  2 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:7</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Disease Of<BR/>Anatomical Entity</TD></TR>
+    </TABLE>
+  >];
+  3 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:1579</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Respiratory System<BR/>Disease</TD></TR>
+    </TABLE>
+  >];
+  4 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:0050161</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Lower Respiratory<BR/>Tract Disease</TD></TR>
+    </TABLE>
+  >];
+  5 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:1176</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Bronchial Disease</TD></TR>
+    </TABLE>
+  >];
+  6 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:6132</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Bronchitis</TD></TR>
+    </TABLE>
+  >];
+  7 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:850</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Lung Disease</TD></TR>
+    </TABLE>
+  >];
+  8 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:552</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Pneumonia</TD></TR>
+    </TABLE>
+  >];
+  9 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:2914</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Immune System<BR/>Disease</TD></TR>
+    </TABLE>
+  >];
+  10 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:0060056</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Hypersensitivity<BR/>Reaction Disease</TD></TR>
+    </TABLE>
+  >];
+  11 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:1205</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Allergic<BR/>Hypersensitivity<BR/>Disease</TD></TR>
+    </TABLE>
+  >];
+  12 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:0060496</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Respiratory Allergy</TD></TR>
+    </TABLE>
+  >];
+  13 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:2841</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Asthma</TD></TR>
+    </TABLE>
+  >];
+  14 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">DOID:9415</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Allergic Asthma</TD></TR>
+    </TABLE>
+  >];
+  1 -> 2 [dir="back"];
+  2 -> 3 [dir="back"];
+  3 -> 4 [dir="back"];
+  4 -> 5 [dir="back"];
+  5 -> 6 [dir="back"];
+  4 -> 7 [dir="back"];
+  7 -> 8 [dir="back"];
+  2 -> 9 [dir="back"];
+  9 -> 10 [dir="back"];
+  10 -> 11 [dir="back"];
+  11 -> 12 [dir="back"];
+  5 -> 13 [dir="back"];
+  12 -> 14 [dir="back"];
+  13 -> 14 [dir="back"];
+}

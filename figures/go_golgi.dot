@@ -1,0 +1,99 @@
+digraph {
+  graph [pad="0.0", nodesep="0.5", ranksep="0.25"];
+  node [shape=none, fixedsize=false, fontname="Arial", fontsize=10];
+  edge [dir="back"];
+  1 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0005575</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Cellular Component</TD></TR>
+    </TABLE>
+  >];
+  2 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0043226</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Organelle</TD></TR>
+    </TABLE>
+  >];
+  3 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0043227</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Membrane-Bounded<BR/>Organelle</TD></TR>
+    </TABLE>
+  >];
+  4 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0005623</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Cell</TD></TR>
+    </TABLE>
+  >];
+  5 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0044464</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Cell Part</TD></TR>
+    </TABLE>
+  >];
+  6 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0005622</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Intracellular</TD></TR>
+    </TABLE>
+  >];
+  7 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0044424</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Intracellular Part</TD></TR>
+    </TABLE>
+  >];
+  8 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0043229</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Intracellular<BR/>Organelle</TD></TR>
+    </TABLE>
+  >];
+  9 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0043231</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Intracellular<BR/>Membrane-Bounded<BR/>Organelle</TD></TR>
+    </TABLE>
+  >];
+  10 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0005737</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Cytoplasm</TD></TR>
+    </TABLE>
+  >];
+  11 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0044444</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Cytoplasmic Part</TD></TR>
+    </TABLE>
+  >];
+  12 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0012505</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Endomembrane System</TD></TR>
+    </TABLE>
+  >];
+  13 [label=<
+    <TABLE BORDER="0" CELLPADDING="4" CELLSPACING="0">
+      <TR><TD BORDER="0" BGCOLOR="black"><FONT COLOR="white">GO:0005794</FONT></TD></TR>
+      <TR><TD BORDER="0" COLOR="red" BGCOLOR="#add8e6">Golgi Apparatus</TD></TR>
+    </TABLE>
+  >];
+  1 -> 2 [dir="back"];
+  2 -> 3 [dir="back"];
+  1 -> 4 [dir="back"];
+  4 -> 5 [dir="back", color="blue"];
+  5 -> 6 [dir="back"];
+  6 -> 7 [dir="back", color="blue"];
+  2 -> 8 [dir="back"];
+  7 -> 8 [dir="back", color="blue"];
+  3 -> 9 [dir="back"];
+  8 -> 9 [dir="back"];
+  7 -> 10 [dir="back"];
+  10 -> 11 [dir="back", color="blue"];
+  5 -> 12 [dir="back"];
+  9 -> 13 [dir="back"];
+  11 -> 13 [dir="back"];
+  12 -> 13 [dir="back", color="blue"];
+}

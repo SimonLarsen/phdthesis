@@ -1,0 +1,23 @@
+This thesis comprises of a general introduction and motivation followed by five manuscripts and finally a general discussion, outlook and conclusion.
+In this section, I provide a short overview of the contents of each chapter.
+
+\subsubsection*{Introduction} This chapter describes the overall motivation for the thesis followed by an introduction to the theory and techniques relevant to the following chapters. The purpose of this chapter is to provide the reader with a general understanding of the relevant concepts necessary to understand the included manuscripts. Finally, the main hypotheses and aims of the thesis are stated.
+
+\subsubsection*{Manuscript 1: CytoMCS: a multiple maximum common subgraph detection tool for Cytoscape}
+In this manuscript we introduce a heuristic algorithm for the maximum common edge subgraph problem. Our method uses an iterated local search to optimize an edge conservation score that factors in both fully and partially conserved edges. We also provide our method as a Cytoscape app to make it readily available to users.
+
+\subsubsection*{Manuscript 2: CoNVaQ: a web tool for copy number variation-based association studies}
+Here we present CoNVaQ, a new method for performing CNV-based association studies. We first define our algorithm for segmenting the genome into distinct CNV regions. Then we describe our two models: a standard significance test based on Fisher's exact test and a query-based model that finds regions matching a user-specified query. The models are then demonstrated by finding CNV regions associated with HPV-status in a penile cancer data set.
+CoNVaQ was implemented as a package for the R programming language. We also developed an online platform allowing users to upload their data and perform these analyses remotely on our server.
+
+\subsubsection*{Manuscript 3: \emph{E. coli} gene regulatory networks are inconsistent with gene expression data}
+In this study, we investigated how well transcriptional regulatory interactions in \emph{E. coli} are reflected in gene expression levels. We assembled a regulatory network from RegulonDB and obtained microarray expression data from 805 samples. We first evaluated the correlation between the expression of transcription factors and their targets, and found that both activating and repressing interactions were associated with a modest positive correlation. Then we quantified the overall consistency between the network and expression data using a sign consistency model and found that the inconsistency level was comparable to random network models. Finally, we discuss the implications and possible causes of these conclusions.
+
+\subsubsection*{Manuscript 4: \emph{De novo} and supervised endophenotyping using network-guided ensemble learning}
+This manuscript describes Grand Forest, a decision tree-based algorithm for \emph{de novo} network enrichment. The method trains a large decision tree forest, constraining each tree to a connected subnetwork of the global interaction network, while ensuring all adjacent splits in the tree are adjacent in the network. Feature selection is then used to extract a gene module. We evaluate our method against four state of the art methods on five gene expression data sets. Finally, we discuss why the favorable results are likely driven mainly by bias in the interaction network.
+
+\subsubsection*{Manuscript 5: Analysis of genetic variants in chronic obstructive pulmonary disease using a hierarchical model of the cell}
+In the last manuscript we introduce a method for analyzing genetic variants using a hierarchical cell model. We construct a hierarchy from the Gene Ontology database and search for enriched terms using a principal component regression framework. We also apply two conditional tests to filter terms that are redundant or driven by a single gene. We discover two mechanisms associated with COPD status that were not implicated in the standard GWAS and discuss their relevance to obstructive lung disease.
+
+\subsubsection*{Discussion, outlook and conclusion}
+Here I provide a general discussion of the results presented in manuscript 1 through 5. The main conclusions from the manuscripts are summarized and possible future work is discussed. Finally, the overall implications and conclusions of the thesis are discussed together.

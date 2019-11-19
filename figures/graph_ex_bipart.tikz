@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \tikzstyle{vertex}=[draw,circle,line width=1.0pt];
+    \tikzstyle{myedge}=[line width=1.0pt];
+
+    \node[vertex] (a1) at (0.0, 0.5) {};
+    \node[vertex] (a2) at (0.0, 1.5) {};
+    \node[vertex] (a3) at (0.0, 2.5) {};
+
+    \node[vertex] (b1) at (2.00, 0.0) {};
+    \node[vertex] (b2) at (2.00, 1.0) {};
+    \node[vertex] (b3) at (2.00, 2.0) {};
+    \node[vertex] (b4) at (2.00, 3.0) {};
+
+    \path[myedge] (a1) edge (b1);
+    \path[myedge] (a2) edge (b2);
+    \path[myedge] (a2) edge (b4);
+    \path[myedge] (a3) edge (b3);
+
+    \draw (0,1.5) ellipse (0.5cm and 2cm);
+    \draw (2,1.5) ellipse (0.5cm and 2cm);
+
+    \node (u) at (0, 3.8) {$U$};
+    \node (u) at (2, 3.8) {$V$};
+\end{tikzpicture}
